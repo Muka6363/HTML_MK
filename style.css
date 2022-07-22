@@ -30,9 +30,9 @@
   border: #66555d solid 10px;
   transition: 0.5s;
 }
-.navbar .logo a {
+.logo a {
   text-decoration: none;
-  font-size: 40px;
+  font-size: 30px;
   font-family: sans-serif;
   color: #ffffff;
 }
