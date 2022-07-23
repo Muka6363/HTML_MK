@@ -79,6 +79,8 @@
   font-weight: bold;
   width: 900px;
   text-align: center;
+  background-color: #ff6e00;
+  /* background: rgb(201, 27, 27); */
 }
 .center h2 {
   color: #ff6e00;
@@ -87,6 +89,8 @@
   width: 885px;
   margin-top: 10px;
   text-align: center;
+  border: #e607ee solid 5px;
+  background-color: chartreuse;
 }
 
 .center .buttons {
@@ -99,10 +103,11 @@
   font-size: 18px;
   font-weight: bold;
   color: rgb(84, 71, 71);
-  background: rgb(202, 202, 202);
+  background: rgb(201, 27, 27);
   border: solid 1px rgb(235, 71, 49);
   cursor: pointer;
   outline: none;
+  background-color: #ff6e00;
   border-radius: 25px;
   transition: 0.5s;
 }
