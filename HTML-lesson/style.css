@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap");
+* {
+}
+
+.container {
+  background: url(http://www.newporthigh.co.uk/wp-content/uploads/2020/10/tmZi0S.jpg);
+  height: 100vh;
+
+  background-size: 100% 100%;
+}
+
+.container .navbar {
+  width: 100%;
+  height: 100px;
+  background: rgba(102, 104, 107, 0.4);
+  border: #08ec39 solid 10px;
+}
+
+.navbar .logo {
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 20px;
+  border: #ec0872 solid 10px;
+}
+.ppp {
+  margin-left: 50px;
+  display: inline-block;
+  font-size: 40px;
+  text-align: right;
+  border: #66555d solid 10px;
+  transition: 0.5s;
+}
+.logo a {
+  text-decoration: none;
+  font-size: 30px;
+  font-family: sans-serif;
+  color: #ffffff;
+}
+
+.navbar ul {
+  float: right;
+  margin-right: 20px;
+}
+
+.navbar ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 0 8px;
+  line-height: 80px;
+}
+
+.navbar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 40px;
+  padding: 6px 13px;
+  font-family: Roboto;
+  transition: 0.5s;
+}
+
+.navbar ul li a.active,
+.navbar ul li a:hover {
+  background: #e607ee;
+  border-radius: 15px;
+}
+
+.container .center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: sans-serif;
+  user-select: none;
+}
+
+.center h1 {
+  color: black;
+  font-size: 70px;
+  font-weight: bold;
+  width: 900px;
+  text-align: center;
+  background-color: #ff6e00;
+  /* background: rgb(201, 27, 27); */
+}
+.center h2 {
+  color: #ff6e00;
+  font-size: 50px;
+  font-weight: bold;
+  width: 885px;
+  margin-top: 10px;
+  text-align: center;
+  border: #e607ee solid 5px;
+  background-color: chartreuse;
+}
+
+.center .buttons {
+  margin: 35px 280px;
+}
+
+.buttons button {
+  height: 50px;
+  width: 150px;
+  font-size: 18px;
+  font-weight: bold;
+  color: rgb(84, 71, 71);
+  background: rgb(201, 27, 27);
+  border: solid 1px rgb(235, 71, 49);
+  cursor: pointer;
+  outline: none;
+  background-color: #ff6e00;
+  border-radius: 25px;
+  transition: 0.5s;
+}
+.buttons button:hover {
+  background-color: rgb(6, 231, 63);
+}
