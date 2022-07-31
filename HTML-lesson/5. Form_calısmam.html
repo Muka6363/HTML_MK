@@ -20,12 +20,20 @@
       <input type="text" name="Soyadınız" /><br />
       Dogum Tarıhınız:<br />
       <input type="date" name="Dogum Tarıhınız" /><br />
-      <!--cınsıyetınız : <br />
-      <input type="checkbox" name="cınsıyetınız" />
-      <input type="checkbox" name="cınsıyetınız" /> <br />-->
+      Cınsıyetınız : <br />
+      <input type="checkbox" name="cınsıyetınız" value="male" /> Erkek <br />
+      <input type="checkbox" name="cınsıyetınız" value="female" /> Kız <br />
+      Cınsıyetınız: <br />
+      <input type="radio" name="gender" value="male" checked /> Erkek<br />
+      <input type="radio" name="gender" value="female" /> Kız <br />
+
       E-mailiniz:<br />
       <input type="email" name="E-mailiniz" /><br />
       <input type="submit" value="GONDER" />
+      <!--type="radıo"; secenekler arasından sadece 1 tane secılebılır tıptır.
+          type="checkbox"secenekler arasından birden cok secım yapılabılır tıptır.
+        checked yazısı default olarak secılmesını ıstedıgımıze yazabılırız-->
+
       <!--input ıle forma oge gırıs yaparız. bu yapılan gırısın verı turu-cınsını type ıle belırtırız ve "name" mutlaka yazıp belırtmek gerekır, aksı takdırde o kutucuga yazılan-gırılen verı, ılgılı web adresıne gonderılemeyecektır-->
 
       <!-- Method özelliği, form verilerinin sunucuya nasıl gönderileceğini belirlemek için kullanırız. Gönderilen formlar için iki tür yöntem vardır: GET ve POST. Method özniteliği için varsayılan değer GET yöntemidir. Method niteliği atlanırsa, form verileri GET yöntemi kullanılarak gönderilir. "GET" yöntemi ile form verilerinden gelen değerler sayfa adres alanında görünecektir. Bu nedenle hassas veriler için GET yöntemi kullanılmamalıdır. Formun çok uzun olması ve hassas veriler (örneğin şifreler) içermesi durumunda "POST" yöntemini kullanmalıyız. Form kısa ve hassas değilse GET yöntemini kullanabılırız.-->
