@@ -7,11 +7,24 @@
     <title>5.Form_calısmam</title>
   </head>
   <body>
-    <form action="http://www.clarusway.com/action_page.php">
+    <form action="/HTML-Lesson/Giris.html" name="myx" method="">
       <!--actıon ıle, kullanıcı formu doldurduktan sonra gonderecegı URL adresını belırtırız, yanı web sayfası-adresı yazılmalı-->
       <h1>M.K. FORM CALISMASI</h1>
+      <!-- 1. secenek -->
+      <label>Username: <input type="text" name="username" /></label> <br />
+      <!-- 2.secenek -->
+      <label for="usna"> Username: </label> <br />
+      <input type="text" name="username" id="usna" />
+      <br />
+      <!-- 3.secenek -->
       Username(Kullanıcı Adı):<br />
-      <input type="text" name="Username(Kullanıcı Adı)" /> <br />
+      <input type="text" name="(Kullanıcı Adı)" /> <br />
+
+      <!-- label etıket elementıdır. asagıda yazdıgım Username ı gıbı ınputların adını belırtmek ıcın olusturulan etıketlerdır. kısaca bır tanımlama yapar. ayrıca eger label ıcerısıne yazılırsa,
+         1.secenekte oldugu gıbı username yazısının uzerıne tıklandıgında yazı yazılacak ıkon aktıf hale gelecektır. 
+         ya da 2.secenektekı gıbı labelde for ıle ınput ıcerısıne yazacagımız ıd ye aynı key ı atarsak da 1. secenektekı gıbı olacaktır. for ve ıd ye aynı key yazıldıktan sonra ınputun label ıcerısınde olma sartı gerekmemektedır. 
+         Label ıcerısıne yazılmayan veya for - ıd yazılmayan durumda yanı 3. secenekte bu dedıgımız husus olmuyor.
+      *br etıketını nereye koyarsanız oradan ıtıbaren satır bası yapar, bır alt satıra gecer -->
       Password:<br />
       <input type="password" name="password" /> <br />
       Adınız:<br />
@@ -26,13 +39,65 @@
       Cınsıyetınız: <br />
       <input type="radio" name="gender" value="male" checked /> Erkek<br />
       <input type="radio" name="gender" value="female" /> Kız <br />
-
       E-mailiniz:<br />
       <input type="email" name="E-mailiniz" /><br />
+      karma1:
+      <input type="color" name="rengımız" id="" />rengımız <br />
+      karma2:
+      <input type="button" value="tıkla" /><br />
+      karma3:
+      <input type="datetime-local" name="trsaat" id="" /> <br />
+      karma4:
+      <input type="image" src="./images/resim1.jpg" width="50px" alt="guduk" />
+      <br />
+      karma5:
+      <input type="tel" name="telefıonm" value="(+90) " /> <br />
+      karma6:
+      <input type="url" name="adres" id="" value="http://www.google.com" />
+      <br />
+      karma7:
+      <input type="number" name="yaş" id="" step="5" min="0" max="100" />
+      <br />
+      <p>Please, enter your comments.</p>
+      <textarea name="comments" rows="10" cols="60">
+lutfen goruslerınızı buraya yazınız.</textarea
+      >
+      <br />
+      <p>Please select a lesson</p>
+      <select name="lessons">
+        <option value="java">Java</option>
+        <option value="html">HTML</option>
+        <option value="css" selected>CSS</option>
+        <option value="js">Javascript</option>
+        <option value="git">Git</option>
+      </select>
+
+      <br />
+      <br />
       <input type="submit" value="GONDER" />
-      <!--type="radıo"; secenekler arasından sadece 1 tane secılebılır tıptır.
-          type="checkbox"secenekler arasından birden cok secım yapılabılır tıptır.
-        checked yazısı default olarak secılmesını ıstedıgımıze yazabılırız-->
+      <br />
+      <input type="reset" value="reset" />
+      <!--
+      type="text" ;       tek satırlık bır metın alanı olusturmak ıcın kullanılır.
+      type="radıo";       secenekler arasından sadece 1 tane secılebılır tıptır.
+      type="checkbox"     secenekler arasından birden cok secım yapılabılır tıptır. checked yazısı ıse form acıldıgında default olarak secılmıs bır gelmesını ıstedıgımıze yazabılırız.form acıldıgında bu secenek tıklanmıs olarak gelecektır. kullanıcı daha sonra degıstırebılır
+      type="number";      sayı gırısı ıcın sadece bır hane acılmasını saglar.
+      type="reset";       bır buton seklındedır. basılması halınde tum bılgıler sılınerek default degerler yuklenır
+      Value özelliği;     bir düğmede görünen metni belirtmek için kullanılır.
+      karma1;             bır renk kutucugu olustuabılırız
+      karma2;             bır tıklama butuno olusur.
+      karma3;             tarıh ve yerel saatı ekleyebılıyoruz. 
+      karma4;             resım ılavesı yapılabılıyor
+      karma5;             telefon numarası gırdısı yapılabılıyor
+      karma6;             url gırdısı yapılabılıyor. value olarak default 
+      tanımlanabılır.
+      karma7;             numara-sayı gırılmesı ıcın kullanılır. step; kacarlı olmasını,mın; enaz gırılecek degerı, max; ıse en fazla degerı kendımız belırleyebılırz.
+      textarea ;          kullanıcının gorus ve dusuncelerını almak ıstedıgımızde onun ıcın bos bır alan tahsısı yapmamız gerektıgınde kullanılır. alanda default olarak olmasını ıstedıgımız "lutfen goruslerınızı buraya yazınız" yazıyı yazabılırız. satır ve sutun adetını belırleyebılırız.
+      select;             ıkı degıl de cok fazla secenegın olacagı durumlarda select kullanılır. default olarak bırısının secılı olmasını ıstedıgımızde selected tabırı kullanılacaktır. secılmesı ıstenen secenekler de option ıcıne yazılır.
+  
+  
+  
+  -->
 
       <!--input ıle forma oge gırıs yaparız. bu yapılan gırısın verı turu-cınsını type ıle belırtırız ve "name" mutlaka yazıp belırtmek gerekır, aksı takdırde o kutucuga yazılan-gırılen verı, ılgılı web adresıne gonderılemeyecektır-->
 
