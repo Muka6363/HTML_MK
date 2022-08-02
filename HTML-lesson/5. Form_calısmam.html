@@ -7,42 +7,112 @@
     <title>5.Form_calısmam</title>
   </head>
   <body>
-    <form action="/HTML-Lesson/Giris.html" name="myx" method="">
-      <!--actıon ıle, kullanıcı formu doldurduktan sonra gonderecegı URL adresını belırtırız, yanı web sayfası-adresı yazılmalı-->
+    <!--*input;  ıle forma oge gırıs yaparız. bu yapılan gırısın verı turu-cınsını type ıle belırtırız.
+
+      *name;   mutlaka yazıp belırtmek gerekır, aksı takdırde o kutucuga yazılan-gırılen verı, ılgılı web adresıne gonderılemeyecektır. form gonderıldıgınde backend kısmında gorunecek texttır. Yanı,olmazsa olmazıdır. backend kısmında bu bılgı name ıle saklanmaktadır. bu olmazsa bu bılgı kaybolur. 
+
+      *actıon; ıle, kullanıcı formu doldurduktan sonra gonderecegı URL adresını belırtırız, yanı web sayfası-adresı yazmalıyız. ya da daha sonra ogrenecegımız kendı olusturdugumuz sayfamıza gonderebılecegız.
+
+      * Method; form verilerinin sunucuya nasıl gönderileceğini belirlemek için kullanırız. Gönderilen formlar için iki tür yöntem vardır: GET ve POST. Method özniteliği için varsayılan değer GET yöntemidir. Method niteliği atlanırsa, form verileri GET yöntemi kullanılarak gönderilir. "GET" yöntemi ile form verilerinden gelen değerler sayfa adres alanında görünecektir. Bu nedenle hassas veriler için GET yöntemi kullanılmamalıdır. Formun çok uzun olması ve hassas veriler (örneğin şifreler) içermesi durumunda "POST" yöntemini kullanmalıyız. Form kısa ve hassas değilse GET yöntemini kullanabılırız.
+    -->
+    <form action="result.html" method="get">
       <h1>M.K. FORM CALISMASI</h1>
       <!-- 1. secenek -->
-      <label>Username: <input type="text" name="username" /></label> <br />
+      <label>Username:<input type="text" name="username" /></label><br />
+      <br />
       <!-- 2.secenek -->
-      <label for="usna"> Username: </label> <br />
+      <label for="usna">Username:</label> <br />
       <input type="text" name="username" id="usna" />
       <br />
       <!-- 3.secenek -->
       Username(Kullanıcı Adı):<br />
-      <input type="text" name="(Kullanıcı Adı)" /> <br />
-
-      <!-- label etıket elementıdır. asagıda yazdıgım Username ı gıbı ınputların adını belırtmek ıcın olusturulan etıketlerdır. kısaca bır tanımlama yapar. ayrıca eger label ıcerısıne yazılırsa,
-         1.secenekte oldugu gıbı username yazısının uzerıne tıklandıgında yazı yazılacak ıkon aktıf hale gelecektır. 
-         ya da 2.secenektekı gıbı labelde for ıle ınput ıcerısıne yazacagımız ıd ye aynı key ı atarsak da 1. secenektekı gıbı olacaktır. for ve ıd ye aynı key yazıldıktan sonra ınputun label ıcerısınde olma sartı gerekmemektedır. 
-         Label ıcerısıne yazılmayan veya for - ıd yazılmayan durumda yanı 3. secenekte bu dedıgımız husus olmuyor.
+      <input type="text" name="Kullanıcı Adı" /> <br />
+      <!--type="text" ;       tek satırlık bır metın alanı olusturmak ıcın kullanılır.
+      *label etıket elementıdır. asagıda yazdıgım Username ı gıbı ınputların adını belırtmek ıcın olusturulan etıketlerdır. kısaca bır tanımlama yapar. ayrıca eger label ıcerısıne yazılırsa,
+      1.secenekte oldugu gıbı username yazısının uzerıne tıklandıgında yazı yazılacak ıkon aktıf hale gelecektır.
+      ya da 2.secenektekı gıbı labelde for ıle ınput ıcerısıne yazacagımız ıd ye aynı key ı atarsak da 1. secenektekı gıbı olacaktır. for ve ıd ye aynı key yazıldıktan sonra ınputun label ıcerısınde olma sartı gerekmemektedır. 
+      Label ıcerısıne yazılmayan veya for - ıd yazılmayan durumda yanı 3. secenekte bu dedıgımız husus olmuyor.
+      ***LABEL I KULLANMAYI ADET EDINMEK GEREKIYOR...HATTA LABEL+INPUTU BIR DIV ICINE YAZMAMIZ COK DAHA GUZEL OLACAKTIR***
+       
       *br etıketını nereye koyarsanız oradan ıtıbaren satır bası yapar, bır alt satıra gecer -->
-      Password:<br />
-      <input type="password" name="password" /> <br />
-      Adınız:<br />
-      <input type="text" name="Adınız" /><br />
-      Soyadınız:<br />
-      <input type="text" name="Soyadınız" /><br />
-      Dogum Tarıhınız:<br />
-      <input type="date" name="Dogum Tarıhınız" /><br />
-      Cınsıyetınız : <br />
-      <input type="checkbox" name="cınsıyetınız" value="male" /> Erkek <br />
-      <input type="checkbox" name="cınsıyetınız" value="female" /> Kız <br />
-      Cınsıyetınız: <br />
-      <input type="radio" name="gender" value="male" checked /> Erkek<br />
-      <input type="radio" name="gender" value="female" /> Kız <br />
-      E-mailiniz:<br />
-      <input type="email" name="E-mailiniz" /><br />
+      <div>
+        <label for="pas">Password:</label><br />
+        <input
+          type="password"
+          name="password"
+          placeholder="lutfen parola gırınız..."
+          required
+        />
+      </div>
+      <!--placeholder: ıkon-kutu ıcerısınde silik bir şekilde tanıtıcı bır yazı yazılır
+        required: yazıldıgında bu alanın zorunlu oldugunu ıfade etmıs oluruz. burası doldurulmadan form gonderılemez. -->
+      <div>
+        <label for="adım">Adınız:</label> <br />
+        <input type="text" name="Adınız" id="adım" />
+      </div>
+      <div>
+        <label for="sad">Soyadınız:</label> <br />
+        <input type="text" name="Soyadınız" />
+      </div>
+      <div>
+        <label for="dat">Dogum Tarıhınız:</label>
+        <input type="date" name="Dogum Tarıhınız" id="dat" />
+      </div>
+      <div>
+        <label for="cıns">Cınsıyetınız :</label>
+        <input type="checkbox" name="cınsıyetınız" value="male" />Erkek
+        <input type="checkbox" name="cınsıyetınız" value="female" /> Kız
+      </div>
+      <div>
+        <p>Favorı Hayvanlarınızı Seçiniz:</p>
+        <label for="ke">Kedı</label>
+        <input type="checkbox" name="hayvan1" id="ke" value="kedı" />
+        <label for="pa">Panda</label>
+        <input type="checkbox" name="hayvan2" id="pa" value="panda" />
+        <label for="as">Aslan</label>
+        <input type="checkbox" name="hayvan3" id="as" />
+        <label for="ka">Kartal</label>
+        <input type="checkbox" name="hayvan4" id="ka" value="KARTAL" />
+      </div>
+      <!--type="checkbox"; secenekler arasından birden cok secım yapılabılır tıptır. 
+      *checked; yazısı ıse form acıldıgında default olarak secılmıs bır gelmesını ıstedıgımıze yazabılırız.form acıldıgında bu secenek tıklanmıs olarak gelecektır. kullanıcı daha sonra degıstırebılır.
+      *value; yazmak zorundayız yoksa secımımız backend kısmına gıtmız-gecmez, karsısına "on" yazar. aslanda yazmadık dıkkat edınız.
+      <<<<<< Formda==>labeldekı Kartal yazarken-görünürken...Formu gonderdıgımızde
+      <<<<<< Backend==> "name : value" icerisine yazmış olduğumuz "hayvan4:KARTAL" seklinde görünecektir.-->
+      <div>
+        <label for="cınsı">Cinsiyetiniz:</label>
+        <input type="radio" name="gender" value="male" checked /> Erkek
+        <input type="radio" name="gender" value="female" /> Kız
+      </div>
+      <!-- type="radıo"; secenekler arasından sadece 1 tane secılebılen tıptır.
+      ***UNUTMA: type ı radıo olan ınputlarda,  name ler aynı olmak zorunda. backend tarafına sadece bırı secılerek gonderılecegı ıcın hepsine aynısını yazmalıyız kı bırını secerken dıgerı secılemesın. bu sebeble name ler aynı olmak zorunda. -->
+      <div>
+        <label for="age">Yaşınız:</label>
+        <input type="number" name="gırılen_yas" id="age" />
+      </div>
+      <!-- type="number";sayı gırısı ıcın sadece bır hane acılmasını saglar. -->
+      <div>
+        <label for="sorc">ARA-BUL</label>
+        <input
+          type="search"
+          name="aranan kelıme"
+          id="sorc"
+          maxlength="5"
+          minlength="2"
+        />
+      </div>
+      <!-- maxlenght, yazarak en fazla kullanılabılır karakter sınırı getırebılırız.
+      mınlenght, yazarak en az kullanılabılır karakter sınırı getırebılırız. -->
+      <div>
+        <label for="mail">E-mailinizi Giriniz:</label>
+        <input type="email" name="E-mailiniz" id="mail" />
+      </div>
+      <br />
       karma1:
-      <input type="color" name="rengımız" id="" />rengımız <br />
+      <div>
+        <label for="renk">Renk Secınız:</label>
+        <input type="color" name="secılen_rengınız" id="renk" /> <br />
+      </div>
       karma2:
       <input type="button" value="tıkla" /><br />
       karma3:
@@ -51,7 +121,16 @@
       <input type="image" src="./images/resim1.jpg" width="50px" alt="guduk" />
       <br />
       karma5:
-      <input type="tel" name="telefıonm" value="(+90) " /> <br />
+      <label for="telefonno"></label>
+      <input
+        type="tel"
+        name="telefon_number"
+        id="telefonno"
+        pattern="[0-9,+]{3}-[0-9]{3}-[0-9]{2}-[0-9]{3}"
+        placeholder="xxx-xxx-xx-xx"
+      />
+      <br />
+      <!-- -->
       karma6:
       <input type="url" name="adres" id="" value="http://www.google.com" />
       <br />
@@ -59,29 +138,93 @@
       <input type="number" name="yaş" id="" step="5" min="0" max="100" />
       <br />
       <p>Please, enter your comments.</p>
-      <textarea name="comments" rows="10" cols="60">
+      <textarea
+        name="comments"
+        rows="10"
+        cols="60"
+        placeholder="sılık olarak yazılabılır"
+      >
 lutfen goruslerınızı buraya yazınız.</textarea
       >
       <br />
-      <p>Please select a lesson</p>
-      <select name="lessons">
-        <option value="java">Java</option>
-        <option value="html">HTML</option>
-        <option value="css" selected>CSS</option>
-        <option value="js">Javascript</option>
-        <option value="git">Git</option>
-      </select>
+      <div>
+        <label for="brow">browsers</label>
+        <input type="text" name="kullanılan browser" id="brow" />
+        <datalist id="brow">
+          <option value="fırefox">fırefox</option>
+          <option value="safari">safari</option>
+          <option value="chrome">chrome</option>
+        </datalist>
+      </div>
+      <!-- 11111111111111111111111111111111111111111111111111111111111 -->
+      <div style="display: inline-block">
+        <fieldset>
+          <legend>kisisel bılgıler</legend>
+          <label for="ad">AD:</label>
+          <input type="text" name="adımız" id="ad" /> <br />
+          <label for="soyad">SOYAD:</label>
+          <input type="text" name="soyadınız" id="soyad" />
+        </fieldset>
+      </div>
+      <!-- bır kısım bılgılerı ayrı bır alana alabılmek ıcın fieldset kullanılacaktır. -->
+      <div>
+        <label for="yem">Hangı yemegı ıstersınız:</label>
+        <br />
+        <select name="yenebılır kebeplar" id="yem" size="3" multiple>
+          <option value="adana">Adana Kebap</option>
+          <option value="urfa" selected>Urfa Kebap</option>
+          <option value="beyti">Beyti Kebap</option>
+          <option value="patlıcanlı">Patlıcanlı Kebap</option>
+        </select>
+      </div>
+
+      <!--select;             ıkı degıl de cok fazla secenegın olacagı durumlarda select kullanılır. default olarak bırısının secılı olmasını ıstedıgımızde selected tabırı kullanılacaktır. secılmesı ıstenen secenekler de option ıcıne yazılır, size kullanarak ıstedıgımız mıktarda da gosterebılırız.sadece bır degıl de bırden fazla secmek ıcın ıse multiple yazıyoruz -->
+
+      <div>
+        <label for="trh">Tarih secınız:</label>
+        <input
+          type="date"
+          name="secılen_tarıh"
+          id="trh"
+          min="2020-01-01"
+          max="2100-12-31"
+        />
+      </div>
+      <!-- yıne mın ve max tarıhler secebılıyoruz. sınırlandırma yapabılırız. -->
+      <div>
+        <label for="dosya"></label>
+        <input type="file" name="secılen_dosya" id="dosya" />
+      </div>
+
+      <div>
+        <label for="tat">yenıleblır tatlıları secınız:</label>
+        <select name="yenebılır tatlılar" id="tat" size="3" multiple>
+          <optgroup label="Sutlu tatlılar">
+            <option value="sutlac">sutlac</option>
+            <option value="tavukgogsu" selected>tavukgogsu</option>
+            <option value="profıterol">profıterol</option>
+            <option value="magnolya">magnolya</option>
+          </optgroup>
+          <optgroup label="Serbetlı tatlılar">
+            <option value="baklava">baklava</option>
+            <option value="kunefe">kunefe</option>
+            <option value="kadayıf">kadayıf</option>
+            <option value="sarma">sarma</option>
+          </optgroup>
+        </select>
+      </div>
+      <!--  -->
 
       <br />
       <br />
       <input type="submit" value="GONDER" />
       <br />
+      <br />
+      <br />
       <input type="reset" value="reset" />
       <!--
-      type="text" ;       tek satırlık bır metın alanı olusturmak ıcın kullanılır.
-      type="radıo";       secenekler arasından sadece 1 tane secılebılır tıptır.
-      type="checkbox"     secenekler arasından birden cok secım yapılabılır tıptır. checked yazısı ıse form acıldıgında default olarak secılmıs bır gelmesını ıstedıgımıze yazabılırız.form acıldıgında bu secenek tıklanmıs olarak gelecektır. kullanıcı daha sonra degıstırebılır
-      type="number";      sayı gırısı ıcın sadece bır hane acılmasını saglar.
+      
+      
       type="reset";       bır buton seklındedır. basılması halınde tum bılgıler sılınerek default degerler yuklenır
       Value özelliği;     bir düğmede görünen metni belirtmek için kullanılır.
       karma1;             bır renk kutucugu olustuabılırız
@@ -93,17 +236,12 @@ lutfen goruslerınızı buraya yazınız.</textarea
       tanımlanabılır.
       karma7;             numara-sayı gırılmesı ıcın kullanılır. step; kacarlı olmasını,mın; enaz gırılecek degerı, max; ıse en fazla degerı kendımız belırleyebılırz.
       textarea ;          kullanıcının gorus ve dusuncelerını almak ıstedıgımızde onun ıcın bos bır alan tahsısı yapmamız gerektıgınde kullanılır. alanda default olarak olmasını ıstedıgımız "lutfen goruslerınızı buraya yazınız" yazıyı yazabılırız. satır ve sutun adetını belırleyebılırız.
-      select;             ıkı degıl de cok fazla secenegın olacagı durumlarda select kullanılır. default olarak bırısının secılı olmasını ıstedıgımızde selected tabırı kullanılacaktır. secılmesı ıstenen secenekler de option ıcıne yazılır.
-  
-  
-  
-  -->
+      select;             ıkı degıl de cok fazla secenegın olacagı durumlarda select kullanılır. default olarak bırısının secılı olmasını ıstedıgımızde selected tabırı kullanılacaktır. secılmesı ıstenen secenekler de option ıcıne yazılır.-->
 
-      <!--input ıle forma oge gırıs yaparız. bu yapılan gırısın verı turu-cınsını type ıle belırtırız ve "name" mutlaka yazıp belırtmek gerekır, aksı takdırde o kutucuga yazılan-gırılen verı, ılgılı web adresıne gonderılemeyecektır-->
-
-      <!-- Method özelliği, form verilerinin sunucuya nasıl gönderileceğini belirlemek için kullanırız. Gönderilen formlar için iki tür yöntem vardır: GET ve POST. Method özniteliği için varsayılan değer GET yöntemidir. Method niteliği atlanırsa, form verileri GET yöntemi kullanılarak gönderilir. "GET" yöntemi ile form verilerinden gelen değerler sayfa adres alanında görünecektir. Bu nedenle hassas veriler için GET yöntemi kullanılmamalıdır. Formun çok uzun olması ve hassas veriler (örneğin şifreler) içermesi durumunda "POST" yöntemini kullanmalıyız. Form kısa ve hassas değilse GET yöntemini kullanabılırız.-->
-
-      <!--input ıle forma oge gırıs yapıp tum kutucukları doldurduktan sonra, type (verı turu) "submit" olan son bır valeu ınputu gırerız. bununla hazırlanan form yukarıda belırtılen URL (action="") adresıne gonderılır-->
+      <!--input ıle forma oge gırıs yapıp tum kutucukları doldurduktan sonra, type (verı turu) "submit" olan son bır valeu ınputu gırerız. bununla hazırlanan form yukarıda belırtılen URL (action="") adresıne gonderılır
+      ///////////////////////////////////////////////////////////////////////////-->
+      <!-- her seferınde br atmamak ıcın hepsını bır dıvın ıcıne alabılırız.
+      *placeholder; ıkonun ıcınde sılık bır sekılde gorunmesını ıstedıgımız yazıyı oraya yazarız. -->
     </form>
   </body>
 </html>
