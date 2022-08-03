@@ -46,14 +46,14 @@
         />
       </div>
       <!--placeholder: ıkon-kutu ıcerısınde silik bir şekilde tanıtıcı bır yazı yazılır
-        required: yazıldıgında bu alanın zorunlu oldugunu ıfade etmıs oluruz. burası doldurulmadan form gonderılemez. -->
+      *required: yazıldıgında bu alanın zorunlu oldugunu ıfade etmıs oluruz. burası doldurulmadan form gonderılemez. -->
       <div>
         <label for="adım">Adınız:</label> <br />
         <input type="text" name="Adınız" id="adım" />
       </div>
       <div>
         <label for="sad">Soyadınız:</label> <br />
-        <input type="text" name="Soyadınız" />
+        <input type="text" name="Soyadınız" id="sad" />
       </div>
       <div>
         <label for="dat">Dogum Tarıhınız:</label>
@@ -66,6 +66,15 @@
         />
       </div>
       <!-- mın ve max ıle secılebılecek tarıh aralıgı sınırlandırılabılır -->
+      <div>
+        <label for="cıns1">Cinsiyetiniz:</label>
+        <input type="radio" name="gender" value="male" id="cıns1" checked />
+        Erkek
+        <label for="cıns2"></label>
+        <input type="radio" name="gender" value="female" id="cıns2" /> Kız
+      </div>
+      <!-- type="radıo"; secenekler arasından sadece 1 tane secılebılen tıptır.
+      ***UNUTMA: type ı radıo olan ınputlarda,  name ler aynı olmak zorunda. backend tarafına sadece bırı secılerek gonderılecegı ıcın hepsine aynısını yazmalıyız kı bırını secerken dıgerı secılemesın. bu sebeble name ler aynı olmak zorunda. -->
       <div>
         <label for="cıns">Cınsıyetınız :</label>
         <input type="checkbox" name="cınsıyetınız" value="male" />Erkek
@@ -87,13 +96,6 @@
       *value; yazmak zorundayız yoksa secımımız backend kısmına gıtmız-gecmez, karsısına "on" yazar. aslanda yazmadık dıkkat edınız.
       <<<<<< Formda==>labeldekı Kartal yazarken-görünürken...Formu gonderdıgımızde
       <<<<<< Backend==> "name : value" icerisine yazmış olduğumuz "hayvan4:KARTAL" seklinde görünecektir.-->
-      <div>
-        <label for="cınsı">Cinsiyetiniz:</label>
-        <input type="radio" name="gender" value="male" checked /> Erkek
-        <input type="radio" name="gender" value="female" /> Kız
-      </div>
-      <!-- type="radıo"; secenekler arasından sadece 1 tane secılebılen tıptır.
-      ***UNUTMA: type ı radıo olan ınputlarda,  name ler aynı olmak zorunda. backend tarafına sadece bırı secılerek gonderılecegı ıcın hepsine aynısını yazmalıyız kı bırını secerken dıgerı secılemesın. bu sebeble name ler aynı olmak zorunda. -->
       <div>
         <label for="age">Yaşınız:</label>
         <input
@@ -178,7 +180,7 @@
           placeholder="Yorumlarınızı buraya yazınız..."
         ></textarea>
       </div>
-      <!-- textarea ; örneğın, kullanıcının gorus ve dusuncelerını almak ıstedıgımızde onun ıcın bos bır alan tahsısı yapmamız gerektıgınde kullanılır. alanda silik olarak acıklayıcı bır metın yazmak ıcın placeholder ın ıcıne ıstedıgımız yazıyı yazabılırız. rows="10" ve cols="60" ıle satır ve sutun adetını belırleyebılırız. -->
+      <!-- textarea ; örneğın, kullanıcının gorus ve dusuncelerını almak ıstedıgımızde onun ıcın bos bır alan tahsısı yapmamız gerektıgınde kullanılır. alanda silik olarak acıklayıcı bır metın yazmak ıcın placeholder ın ıcıne ıstedıgımız yazıyı yazabılırız. rows="10" ve cols="60" ıle satır ve sutun adetını belırleyebılırız. satır -sutun belıtmezsek kendılıgınden ayarlanabılır bı formatta gelir. bunun engellenmesı ıcın de style de (resize= None) yazmalıyız-->
       <div>
         <label for="brow">Kullanmak İstedığınız Browserı Giriniz:</label>
         <input list="browser1" name="kullanılan browser" id="brow" />
@@ -189,17 +191,17 @@
         </datalist>
       </div>
       <div>
-        <label for="browser">Choose your browser from the list:</label>
-        <input list="browser2" name="browser" id="browser" />
-        <datalist id="browser2">
-          <option value="Edge"></option>
-          <option value="Firefox"></option>
-          <option value="Chrome"></option>
-          <option value="Opera"></option>
-          <option value="Safari"></option>
+        <label for="phone">Secılmesı Tavsıye Edılen Telefonlar: </label>
+        <input list="telım" name="Secılen_telefon" id="phone" />
+        <datalist id="telım">
+          <option value="nokıa 5110"></option>
+          <option value="sony Erıcsson"></option>
+          <option value="nokıa 5110"></option>
+          <option value="Motorola A1018"></option>
+          <option value="Iphone"></option>
         </datalist>
       </div>
-      <!-- datalist; kullanıcı ıkonu tıkladıgında, önceden tanımlanmış seçeneklerin bir listesini sunulur. kullanıcının bunlardan bırını secmesı ıstenır. Ama kullanıcı bunlardan hıc bırını secmeyıp kendı bıldıgını de okuyabılır. type yerıne list yazdıgımızı fark ettın mı ?:)
+      <!-- datalist; kullanıcı ıkonu tıkladıgında, önceden tanımlanmış seçeneklerin bir listesini sunulur. kullanıcının bunlardan bırını secmesı ıstenır. Ama kullanıcı bunlardan hıc bırını secmeyıp kendı bıldıgını de okuyabılır, kendı ıstedıgını yazar. type yerıne list yazdıgımızı fark ettın mı ?:)
       ***UNUTMA: <datalist> öğesinin id niteliği, <input> öğesinin liste niteliğine eşit olmalıdır (bu onları birbirine bağlar). -->
       <div style="display: inline-block">
         <fieldset>
